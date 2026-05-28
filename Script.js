@@ -1,14 +1,18 @@
+// --- MOBILNÉ MENU ---
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
-menuIcon.onclick = () => {
-    // Prepnutie ikony na 'X' pri otvorení (boxicons má bx-x)
-    menuIcon.classList.toggle('bx-x');
-    // Zobrazenie menu
-    navbar.classList.toggle('active');
-};// JavaScript Document
+if (menuIcon && navbar) {
+    menuIcon.onclick = () => {
+        // Prepnutie ikony na 'X' pri otvorení
+        menuIcon.classList.toggle('bx-x');
+        // Zobrazenie menu
+        navbar.classList.toggle('active');
+    };
+}
+
+// --- EFEKT PÍSANIA (TYPING EFFECT) ---
 const textElement = document.querySelector('.multiple-text');
-// Sem môžeš dopísať akékoľvek ďalšie roly, ktoré chceš striedať
 const words = ['Grafický Dizajnér', 'Web Developer', 'Python Vývojár', 'UI/UX Dizajnér'];
 
 let wordIndex = 0;
@@ -16,6 +20,9 @@ let charIndex = 0;
 let isDeleting = false;
 
 function typeEffect() {
+    // Ak element na stránke neexistuje, funkciu ukončíme, aby nespôsobila chybu
+    if (!textElement) return;
+
     const currentWord = words[wordIndex];
     
     if (isDeleting) {
@@ -50,19 +57,18 @@ function typeEffect() {
 document.addEventListener('DOMContentLoaded', typeEffect);
 
 
-
 // --- FUNKCIONALITA PRE TLAČIDLO ČÍTAŤ VIAC ---
 const readMoreBtn = document.querySelector('.read-more-btn');
 const moreText = document.querySelector('.more-text');
 
 if (readMoreBtn && moreText) {
     readMoreBtn.addEventListener('click', (e) => {
-        e.preventDefault(); // Zabráni skoku stránky, ak je tlačidlo odkaz (<a>)
+        e.preventDefault(); // Zabráni skoku stránky
         
         // Prepne triedu .show na skrytom texte
         moreText.classList.toggle('show');
         
-        // Zmena textu na tlačidle podľa toho, či je text zobrazený
+        // Zmena textu na tlačidle podla stavu
         if (moreText.classList.contains('show')) {
             readMoreBtn.textContent = 'Čítať menej';
         } else {
@@ -72,10 +78,14 @@ if (readMoreBtn && moreText) {
 }
 
 
-
+// --- LIGHTBOX PRE PROJEKTY (ZABEZPEČENÁ VERZIA) ---
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.project-card');
     const lightbox = document.getElementById('project-lightbox');
+    
+    // Ak lightbox v HTML vôbec neexistuje, kód ďalej nepokračuje a nespadne
+    if (!lightbox) return;
+
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxTitle = document.getElementById('lightbox-title');
     
@@ -88,11 +98,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Načítanie projektu podľa indexu
     function showProject(index) {
         const activeCard = cards[index];
-        const imgSrc = activeCard.querySelector('img').src;
-        const titleText = activeCard.querySelector('h3').textContent;
+        if (!activeCard) return;
+
+        const imgEl = activeCard.querySelector('img');
+        const titleEl = activeCard.querySelector('h3');
         
-        lightboxImg.src = imgSrc;
-        lightboxTitle.textContent = titleText;
+        if (imgEl && lightboxImg) {
+            lightboxImg.src = imgEl.src;
+        }
+        if (titleEl && lightboxTitle) {
+            lightboxTitle.textContent = titleEl.textContent;
+        }
         currentIndex = index;
     }
 
@@ -114,9 +130,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'auto'; // Povolenie scrollovania
     }
 
-    closeBtn.addEventListener('click', closeLightbox);
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeLightbox);
+    }
 
-    // Zatvorenie kliknutím na tmavé okolitú plochu
+    // Zatvorenie kliknutím na tmavú okolitú plochu
     lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) {
             closeLightbox();
@@ -137,8 +155,8 @@ document.addEventListener('DOMContentLoaded', () => {
         showProject(index);
     }
 
-    prevBtn.addEventListener('click', navigateLeft);
-    nextBtn.addEventListener('click', navigateRight);
+    if (prevBtn) prevBtn.addEventListener('click', navigateLeft);
+    if (nextBtn) nextBtn.addEventListener('click', navigateRight);
 
     // Podpora klávesnice (Esc, Šípky)
     document.addEventListener('keydown', (e) => {
