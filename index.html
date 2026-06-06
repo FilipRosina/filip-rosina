@@ -3,15 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filip Rosina</title>
-    <link rel="icon" type="image/png" href="image/profilovka.png">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <title>Responzívne Portfólio</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
+    <!-- ZMENA: pridaná cesta k priečinku css -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -309,7 +304,7 @@
         <h2 class="heading">Napíš <span>mi</span></h2>
         
         <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="04f73833-263c-4c6d-958d-2408fcbea528">
+            <input type="hidden" name="access_key" value="d5314db8-6416-4266-8686-072b98b521fb">
 
             <div class="input-box">
                 <input type="text" name="name" placeholder="Celé meno" required>
@@ -358,7 +353,9 @@
         <button class="lightbox-arrow next-arrow" aria-label="Nasledujúci">&#10095;</button>
     </div>
 
-    <script src="script.js"></script>
+    <!-- ZMENA: pridaná cesta k priečinku js -->
+    <script src="js/Script.js"></script>
+    
     <script>
         const form = document.getElementById("contact-form");
         const successMessage = document.getElementById("success-message");
@@ -368,20 +365,14 @@
 
             const formData = new FormData(form);
 
-            // AJAX Odoslanie na Web3Forms
             const response = await fetch(form.action, {
                 method: "POST",
                 body: formData
             });
 
             if(response.ok){
-                // Zobrazenie vyskakovacej hlášky
                 successMessage.classList.add("show");
-
-                // Vyčistenie formulára
                 form.reset();
-
-                // Skrytie hlášky po 4 sekundách
                 setTimeout(() => {
                     successMessage.classList.remove("show");
                 }, 4000);
