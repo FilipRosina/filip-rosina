@@ -10,6 +10,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="image/profilovka.png">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
     <canvas id="grid-canvas"></canvas>
@@ -41,11 +42,22 @@
         <button class="gradient-button">Kontaktuj ma</button>
     </header>
  
-    <!-- ========== HOME ========== -->
     <section class="home" id="home">
         <div class="hero-morph hero-morph-1"></div>
         <div class="hero-morph hero-morph-2"></div>
         <div class="home-content">
+            <div class="character-home-box">
+                <model-viewer 
+                    src="image/Wawing.glb" 
+                    autoplay 
+                    camera-controls
+                    touch-action="pan-y"
+                    shadow-intensity="1" 
+                    disable-zoom 
+                    interaction-prompt="none"
+                    aria-label="3D postavička máva">
+                </model-viewer>
+            </div>
             <div class="home-badge">Dostupný pre projekty</div>
             <h1>Ahoj, ja som <span class="glitch" data-text="Filip Rosina">Filip Rosina</span></h1>
             <h3>Som <span class="multiple-text"></span></h3>
@@ -70,7 +82,6 @@
         </div>
     </section>
  
-    <!-- ========== ABOUT ========== -->
     <section class="about" id="about">
         <div class="about-image">
             <img src="image/profilovka.png" alt="O mne">
@@ -90,7 +101,6 @@
         </div>
     </section>
  
-    <!-- ========== SERVICES ========== -->
     <section class="services" id="services">
         <h2 class="heading">Moje <span>Služby</span></h2>
         <div class="services-container">
@@ -139,7 +149,6 @@
         </div>
     </section>
  
-    <!-- ========== SKILLS ========== -->
     <section class="skills" id="skills">
         <h2 class="heading">Moje <span>Zručnosti</span></h2>
         <div class="skills-container">
@@ -156,14 +165,12 @@
         </div>
     </section>
  
-    <!-- ========== PROJECTS ========== -->
     <section class="projects" id="projects">
         <div class="projects-header">
             <h2 class="heading">Najnovšie <span>Projekty</span></h2>
             <p class="projects-sub">Vybrané práce z oblasti grafiky & webu</p>
         </div>
 
-        <!-- Cursor-following preview image -->
         <div class="proj-preview" id="projPreview">
             <img id="projPreviewImg" src="" alt="">
         </div>
@@ -263,7 +270,6 @@
     </section>
 
  
-    <!-- ========== REVIEWS ========== -->
     <section class="reviews" id="reviews">
         <h2 class="heading">Čo hovoria <span>Klienti</span></h2>
         <div class="reviews-container">
@@ -297,7 +303,6 @@
         </div>
     </section>
  
-    <!-- ========== CONTACT ========== -->
     <section class="contact" id="contact">
         <h2 class="heading">Napíš <span>mi</span></h2>
         <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
@@ -310,12 +315,24 @@
                 <input type="tel" name="phone" placeholder="Telefónne číslo">
                 <input type="text" name="subject" placeholder="Predmet správy">
             </div>
+            <div class="character-contact-box" id="contactCharacter">
+                <model-viewer 
+                    id="contactModel"
+                    src="image/Walking.glb" 
+                    autoplay 
+                    camera-controls
+                    touch-action="pan-y"
+                    shadow-intensity="1" 
+                    disable-zoom 
+                    interaction-prompt="none"
+                    aria-label="3D postavička kráča">
+                </model-viewer>
+            </div>
             <textarea name="message" cols="30" rows="7" placeholder="Tvoja správa" required></textarea>
             <input type="submit" value="Odoslať správu" class="btn">
         </form>
     </section>
  
-    <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="social-icons">
             <a href="https://github.com/filiprosina" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i></a>
@@ -334,10 +351,8 @@
         <p class="copyright">© 2026 Filip Rosina — Všetky práva vyhradené</p>
     </footer>
  
-    <!-- ========== SUCCESS MESSAGE ========== -->
     <div id="success-message">Správa bola úspešne odoslaná! ✓</div>
  
-    <!-- ========== LIGHTBOX ========== -->
     <div id="project-lightbox" class="lightbox">
         <span class="lightbox-close">&times;</span>
         <button class="lightbox-arrow prev-arrow" aria-label="Predchádzajúci">&#10094;</button>
