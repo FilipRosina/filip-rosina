@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosina Portfólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="image/profilovka.png">
+</head>
+<body>
+    <canvas id="grid-canvas"></canvas>
+    <canvas id="particle-canvas"></canvas>
+    <div class="aurora">
+        <div class="aurora-band"></div>
+        <div class="aurora-band"></div>
+        <div class="aurora-band"></div>
+    </div>
+    <div id="scroll-progress"></div>
+    <div class="aurora">
+        <div class="aurora-band"></div>
+        <div class="aurora-band"></div>
+        <div class="aurora-band"></div>
+    </div>
+
+    <header class="header">
+        <a href="#home" class="logo">Filip <span>Rosina</span></a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">O mne</a>
+            <a href="#services">Služby</a>
+            <a href="#skills">Zručnosti</a>
+            <a href="#projects">Projekty</a>
+            <a href="#reviews">Recenzie</a>
+            <a href="#contact">Kontakt</a>
+        </nav>
+        <button class="gradient-button">Kontaktuj ma</button>
+    </header>
+ 
+    <!-- ========== HOME ========== -->
+    <section class="home" id="home">
+        <div class="hero-morph hero-morph-1"></div>
+        <div class="hero-morph hero-morph-2"></div>
+        <div class="home-content">
+            <div class="home-badge">Dostupný pre projekty</div>
+            <h1>Ahoj, ja som <span class="glitch" data-text="Filip Rosina">Filip Rosina</span></h1>
+            <h3>Som <span class="multiple-text"></span></h3>
+            <p>Som študent strednej školy, ktorý spája svet kreatívnej grafiky a moderného kódovania. Vytváram profesionálne logá pre firmy, pútavé plagáty, vizitky a moderné webové stránky.</p>
+            <div class="home-ticker">
+                <div class="ticker-item"><span class="ticker-num">20+</span><span class="ticker-label">Projektov</span></div>
+                <div class="ticker-item"><span class="ticker-num">15+</span><span class="ticker-label">Klientov</span></div>
+                <div class="ticker-item"><span class="ticker-num">3</span><span class="ticker-label">Roky praxe</span></div>
+            </div>
+            <div class="social-icons">
+                <a href="https://github.com/filiprosina" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/filip-rosina-7b0605404/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
+                <a href="mailto:rosinafilip.grafik@gmail.com"><i class='bx bx-envelope'></i></a>
+            </div>
+        </div>
+        <div class="home-image">
+            <img src="image/profilovka.png" alt="Profilová fotka">
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+ 
+    <!-- ========== ABOUT ========== -->
+    <section class="about" id="about">
+        <div class="about-image">
+            <img src="image/profilovka.png" alt="O mne">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">O <span>Mne</span></h2>
+            <p>
+                Som študent strednej školy a venujem sa grafickému dizajnu. Vytváram logá, webové stránky, plagáty, vizitky a ďalšie vizuálne materiály. Svoje zručnosti si momentálne rozširujem aj v oblasti programovania – začal som kurzmi Pythonu a chcem v tomto smere aktívne pokračovať.
+                <span class="more-text"> Vo svojej tvorbe kladiem dôraz na detail, čistotu a moderné trendy, či už ide o komplexnú firemnú identitu alebo responzívny frontend webových stránok. Neustále na sebe pracujem, vyhľadávam nové výzvy a učím sa pracovať s najnovšími technológiami, aby moje výstupy spĺňali tie najvyššie štandardy a prinášali klientom skutočnú hodnotu. V budúcnosti plánujem prepojiť svet vizuálneho umenia s pokročilým vývojom softvéru.</span>
+            </p>
+            <div class="about-stats">
+                <div class="stat-item"><span class="stat-number" data-target="20">0</span><span class="stat-label">Projektov</span></div>
+                <div class="stat-item"><span class="stat-number" data-target="15">0</span><span class="stat-label">Klientov</span></div>
+                <div class="stat-item"><span class="stat-number" data-target="3">0</span><span class="stat-label">Roky skúseností</span></div>
+            </div>
+            <a href="#about" class="btn read-more-btn">Čítať viac</a>
+        </div>
+    </section>
+ 
+    <!-- ========== SERVICES ========== -->
+    <section class="services" id="services">
+        <h2 class="heading">Moje <span>Služby</span></h2>
+        <div class="services-container">
+            <div class="service-box">
+                <div class="service-info">
+                    <i class='bx bx-vector'></i>
+                    <h4>Logá & Branding</h4>
+                    <p>Tvorba jedinečnej vizuálnej identity, moderných logotypov a kompletného firemného dizajnu na mieru.</p>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-info">
+                    <i class='bx bx-book-open'></i>
+                    <h4>Plagáty & Časopisy</h4>
+                    <p>Profesionálna sadzba textu, grafický návrh časopisov, brožúr, katalógov a pútavých reklamných plagátov.</p>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-info">
+                    <i class='bx bx-id-card'></i>
+                    <h4>Vizitky & Tlačoviny</h4>
+                    <p>Návrh reprezentatívnych vizitiek, firemných hlavičkových papierov a iných printových materiálov.</p>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-info">
+                    <i class='bx bx-layout'></i>
+                    <h4>Webdizajn (UI/UX)</h4>
+                    <p>Návrh moderných, čistých a prehľadných vizuálov pre webové stránky a mobilné aplikácie vo Figme.</p>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-info">
+                    <i class='bx bx-images'></i>
+                    <h4>Social Media Grafika</h4>
+                    <p>Tvorba kreatívnych príspevkov, bannerov a vizuálneho obsahu pre sociálne siete Instagram, Facebook či TikTok.</p>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-info">
+                    <i class='bx bx-code-block'></i>
+                    <h4>Základy Kódovania</h4>
+                    <p>Úpravy frontend webov a tvorba jednoduchých automatizovaných skriptov a programov v jazyku Python.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- ========== SKILLS ========== -->
+    <section class="skills" id="skills">
+        <h2 class="heading">Moje <span>Zručnosti</span></h2>
+        <div class="skills-container">
+            <div class="skill-pill"><div class="pill-icon-box"><i class='bx bxl-adobe'></i></div><h3>Adobe Photoshop</h3></div>
+            <div class="skill-pill"><div class="pill-icon-box"><i class='bx bx-palette'></i></div><h3>Adobe Illustrator</h3></div>
+            <div class="skill-pill"><div class="pill-icon-box"><i class='bx bx-news'></i></div><h3>Adobe InDesign</h3></div>
+            <div class="skill-pill"><div class="pill-icon-box"><i class='bx bx-aperture'></i></div><h3>Adobe Lightroom</h3></div>
+            <div class="skill-pill"><div class="pill-icon-box"><i class='bx bx-code-alt'></i></div><h3>Adobe Dreamweaver</h3></div>
+            <div class="skill-pill"><div class="pill-icon-box"><i class='bx bxl-figma'></i></div><h3>Figma</h3></div>
+            <div class="skill-pill"><div class="pill-icon-box"><i class='bx bx-layer'></i></div><h3>Canva</h3></div>
+            <div class="skill-pill"><div class="pill-icon-box"><i class='bx bx-crop'></i></div><h3>Photopea</h3></div>
+            <div class="skill-pill"><div class="pill-icon-box"><i class='bx bxl-python'></i></div><h3>Python</h3></div>
+            <div class="skill-pill"><div class="pill-icon-box"><i class='bx bxl-html5'></i></div><h3>HTML5 & CSS3</h3></div>
+        </div>
+    </section>
+ 
+    <!-- ========== PROJECTS ========== -->
+    <section class="projects" id="projects">
+        <div class="projects-header">
+            <h2 class="heading">Najnovšie <span>Projekty</span></h2>
+            <p class="projects-sub">Vybrané práce z oblasti grafiky & webu</p>
+        </div>
+
+        <!-- Cursor-following preview image -->
+        <div class="proj-preview" id="projPreview">
+            <img id="projPreviewImg" src="" alt="">
+        </div>
+
+        <div class="proj-list">
+            <div class="proj-item" data-img="image/poster.jpg">
+                <div class="proj-item-left">
+                    <span class="proj-num">01</span>
+                    <span class="proj-title">Filmový plagát</span>
+                </div>
+                <div class="proj-item-right">
+                    <span class="proj-tag">Adobe Photoshop</span>
+                    <span class="proj-arrow">&#8599;</span>
+                </div>
+            </div>
+            <div class="proj-item" data-img="image/menu.jpg">
+                <div class="proj-item-left">
+                    <span class="proj-num">02</span>
+                    <span class="proj-title">Menu reštaurácie</span>
+                </div>
+                <div class="proj-item-right">
+                    <span class="proj-tag">Adobe InDesign</span>
+                    <span class="proj-arrow">&#8599;</span>
+                </div>
+            </div>
+            <div class="proj-item" data-img="image/logo.jpg">
+                <div class="proj-item-left">
+                    <span class="proj-num">03</span>
+                    <span class="proj-title">Návrh loga</span>
+                </div>
+                <div class="proj-item-right">
+                    <span class="proj-tag">Adobe Illustrator</span>
+                    <span class="proj-arrow">&#8599;</span>
+                </div>
+            </div>
+            <div class="proj-item" data-img="image/rosina utulok (2).jpg">
+                <div class="proj-item-left">
+                    <span class="proj-num">04</span>
+                    <span class="proj-title">Plagát útulok</span>
+                </div>
+                <div class="proj-item-right">
+                    <span class="proj-tag">Adobe Photoshop</span>
+                    <span class="proj-arrow">&#8599;</span>
+                </div>
+            </div>
+            <div class="proj-item" data-img="image/pop art 2 (1).jpg">
+                <div class="proj-item-left">
+                    <span class="proj-num">05</span>
+                    <span class="proj-title">Pop Art úprava</span>
+                </div>
+                <div class="proj-item-right">
+                    <span class="proj-tag">Adobe Photoshop</span>
+                    <span class="proj-arrow">&#8599;</span>
+                </div>
+            </div>
+            <div class="proj-item" data-img="image/web.jpg">
+                <div class="proj-item-left">
+                    <span class="proj-num">06</span>
+                    <span class="proj-title">Návrh webu / blogu</span>
+                </div>
+                <div class="proj-item-right">
+                    <span class="proj-tag">Figma / HTML & CSS</span>
+                    <span class="proj-arrow">&#8599;</span>
+                </div>
+            </div>
+            <div class="proj-item" data-img="image/foto1.jpg">
+                <div class="proj-item-left">
+                    <span class="proj-num">07</span>
+                    <span class="proj-title">Futbalový Post</span>
+                </div>
+                <div class="proj-item-right">
+                    <span class="proj-tag">Adobe Photoshop</span>
+                    <span class="proj-arrow">&#8599;</span>
+                </div>
+            </div>
+            <div class="proj-item" data-img="image/foto2.jpg">
+                <div class="proj-item-left">
+                    <span class="proj-num">08</span>
+                    <span class="proj-title">Instagram Post</span>
+                </div>
+                <div class="proj-item-right">
+                    <span class="proj-tag">Adobe Photoshop</span>
+                    <span class="proj-arrow">&#8599;</span>
+                </div>
+            </div>
+            <div class="proj-item" data-img="image/pes.jpg">
+                <div class="proj-item-left">
+                    <span class="proj-num">09</span>
+                    <span class="proj-title">Vektorová ilustrácia</span>
+                </div>
+                <div class="proj-item-right">
+                    <span class="proj-tag">Adobe Illustrator</span>
+                    <span class="proj-arrow">&#8599;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+    <!-- ========== REVIEWS ========== -->
+    <section class="reviews" id="reviews">
+        <h2 class="heading">Čo hovoria <span>Klienti</span></h2>
+        <div class="reviews-container">
+            <div class="review-card">
+                <div class="stars">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i>
+                </div>
+                <span class="review-label">Objektívne hodnotenie</span>
+                <p>"Filip nie je len taký obyčajný grafik, ktorý by len slepo plnil príkazy. Pri práci reálne rozmýšľa, ako projekt urobiť vizuálne jedinečným a neodolateľným. Do každej veci vkladá kus originality, takže ak hľadáš parťáka s vlastným názorom a chceš vystúpiť z davu, dá tvojmu brandu tvár, ktorá bude baviť teba aj tvojich klientov."</p>
+                <h3>Jozef Lavko</h3>
+                <span>Spolužiak</span>
+            </div>
+            <div class="review-card">
+                <div class="stars">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                </div>
+                <span class="review-label">Úprava fotiek</span>
+                <p>"Tento úžasný chlapec mi perfektne upravil fotky. Vyzerajú veľmi prirodzene a presne taká úprava ako som chcela. Nejde do ničoho čo nevyzerá prirodzene, alebo čo by vyzeralo umelo. Skvelé. Ďakujem."</p>
+                <h3>Simona Garajová</h3>
+                <span>Zákazníčka</span>
+            </div>
+            <div class="review-card">
+                <div class="stars">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i>
+                </div>
+                <span class="review-label">Webová stránka</span>
+                <p>"S návrhom dizajnu našej novej landing page vo Figme sme boli nadmieru spokojní. Má veľký cit pre detail a čisté UI."</p>
+                <h3>Marek Mrekaj</h3>
+                <span>Zákazník</span>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- ========== CONTACT ========== -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Napíš <span>mi</span></h2>
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="d5314db8-6416-4266-8686-072b98b521fb">
+            <div class="input-box">
+                <input type="text" name="name" placeholder="Celé meno" required>
+                <input type="email" name="email" placeholder="Emailová adresa" required>
+            </div>
+            <div class="input-box">
+                <input type="tel" name="phone" placeholder="Telefónne číslo">
+                <input type="text" name="subject" placeholder="Predmet správy">
+            </div>
+            <textarea name="message" cols="30" rows="7" placeholder="Tvoja správa" required></textarea>
+            <input type="submit" value="Odoslať správu" class="btn">
+        </form>
+    </section>
+ 
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://github.com/filiprosina" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i></a>
+            <a href="https://www.linkedin.com/in/filip-rosina-7b0605404/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
+            <a href="mailto:rosinafilip.grafik@gmail.com"><i class='bx bx-envelope'></i></a>
+        </div>
+        <ul class="list">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#services">Služby</a></li>
+            <li><a href="#skills">Zručnosti</a></li>
+            <li><a href="#about">O mne</a></li>
+            <li><a href="#projects">Projekty</a></li>
+            <li><a href="#reviews">Recenzie</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+        <p class="copyright">© 2026 Filip Rosina — Všetky práva vyhradené</p>
+    </footer>
+ 
+    <!-- ========== SUCCESS MESSAGE ========== -->
+    <div id="success-message">Správa bola úspešne odoslaná! ✓</div>
+ 
+    <!-- ========== LIGHTBOX ========== -->
+    <div id="project-lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <button class="lightbox-arrow prev-arrow" aria-label="Predchádzajúci">&#10094;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Detail projektu">
+            <h3 id="lightbox-title">Názov projektu</h3>
+        </div>
+        <button class="lightbox-arrow next-arrow" aria-label="Nasledujúci">&#10095;</button>
+    </div>
+ 
+    <script src="js/script.js"></script>
+ 
+    <script>
+        const form = document.getElementById("contact-form");
+        const successMessage = document.getElementById("success-message");
+        form.addEventListener("submit", async function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const response = await fetch(form.action, { method: "POST", body: formData });
+            if (response.ok) {
+                successMessage.classList.add("show");
+                form.reset();
+                setTimeout(() => successMessage.classList.remove("show"), 4000);
+            } else {
+                alert("Nastal problém pri odosielaní formulára. Skúste to prosím znova.");
+            }
+        });
+    </script>
+</body>
+</html>
